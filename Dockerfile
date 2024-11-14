@@ -10,14 +10,14 @@ COPY requirements.txt /app/backend
     #&& rm -rf /var/lib/apt/lists/*
 
 #RUN pip install mysqlclient
-RUN pip install --no-cache-dir -r requirements.txt
-
+#RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install  -r requirements.txt
 # Copy application code
-COPY . /app/backend
+COPY .  /app/backend
 
 # Expose the port the app runs on
 EXPOSE 8000
 
 # Run the application
 #CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
-CMD python app/backend/manage.py runserver 0.0.0.0:8000
+
