@@ -86,6 +86,12 @@ WSGI_APPLICATION = 'notesapp.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
+import os
+from dotenv import load_dotenv
+
+load_dotenv()  # Load environment variables from .env file
+
+# Other Django settings...
 
 DATABASES = {
 
